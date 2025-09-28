@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgtvs2sicwnj3"]
+
+[ext_resource type="FontFile" uid="uid://bnjvkkjxfuqfa" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_yukc6"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_top = -59.0
+offset_right = 300.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_yukc6")
+text = "Game completed!
+Well done"
+horizontal_alignment = 1

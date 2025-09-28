@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1ovaefbjadpx"]
+
+[ext_resource type="Script" uid="uid://dcjpqikgp2lm6" path="res://Scripts/skull_item.gd" id="1_q3vvk"]
+[ext_resource type="Texture2D" uid="uid://4lg53wx7asdd" path="res://Assets/skull.png" id="2_hqais"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bepvw"]
+atlas = ExtResource("2_hqais")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_je80u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bepvw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nvws8"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_q3vvk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(84, -8.999999)
+scale = Vector2(1.59375, 1.453125)
+sprite_frames = SubResource("SpriteFrames_je80u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(67, 0)
+shape = SubResource("CircleShape2D_nvws8")
